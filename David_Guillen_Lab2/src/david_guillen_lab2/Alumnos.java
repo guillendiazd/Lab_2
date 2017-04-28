@@ -8,17 +8,18 @@ public class Alumnos {
     private int edad;
     private int resistencia;
     private int grado_academico;
-    private ArrayList<String> mochila = new ArrayList();
-
+    private String mochila;
+    private int poder_fuego;
     public Alumnos() {
     }
 
-    public Alumnos(String apodo, int numero_cuenta, int edad, int resistencia, int grado_academico) {
+    public Alumnos(String apodo, int numero_cuenta, int edad, int resistencia, int grado_academico, String mochila) {
         this.apodo = apodo;
         this.numero_cuenta = numero_cuenta;
         this.edad = edad;
         this.resistencia = resistencia;
         this.grado_academico = grado_academico;
+        this.mochila = mochila;
     }
 
     public String getApodo() {
@@ -61,14 +62,22 @@ public class Alumnos {
         this.grado_academico = grado_academico;
     }
 
-    public ArrayList<String> getMochila() {
+    public String getMochila() {
         return mochila;
     }
 
-    public void setMochila(ArrayList<String> mochila) {
+    public void setMochila(String mochila) {
         this.mochila = mochila;
     }
+    
+    public int getPoder_fuego() {
+        return poder_fuego;
+    }
 
+    public void setPoder_fuego(int poder_fuego) {
+        this.poder_fuego = poder_fuego;
+    }
+    
     @Override
     public String toString() {
         return "Alumnos{" + "apodo=" + apodo + ", numero_cuenta=" + numero_cuenta + ", edad=" + edad + ", resistencia=" + resistencia + ", grado_academico=" + grado_academico + ", mochila=" + mochila + '}';

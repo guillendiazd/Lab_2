@@ -5,7 +5,7 @@ public class Alemanes {
     private String casta;
     private int resistencia;
     private String tipo_arma;
-
+    private int poder_fuego;
     public Alemanes() {
     }
 
@@ -57,6 +57,14 @@ public class Alemanes {
         this.tipo_arma = tipo_arma;
     }
 
+    public int getPoder_fuego() {
+        return poder_fuego;
+    }
+
+    public void setPoder_fuego(int poder_fuego) {
+        this.poder_fuego = poder_fuego;
+    }
+    
     @Override
     public String toString() {
         return "Alemanes{" + "alias=" + alias + ", edad=" + edad + ", casta=" + casta + ", resistencia=" + resistencia + ", tipo_arma=" + tipo_arma + '}';
