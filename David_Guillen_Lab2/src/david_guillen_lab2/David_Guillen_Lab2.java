@@ -238,19 +238,41 @@ import javax.swing.JOptionPane;
                  //---Primera Ronda---
                 int pos = 0;
                 for (Alemanes a : alemanes) {
-                    System.out.println(a.getAlias() + " " + a.getResistencia());
                     int res = a.getResistencia() - rusos.get(pos).getPoder_fuego();
                     a.setResistencia(res);
                     pos++;
-                    System.out.println(a.getAlias() + " " + a.getResistencia());
                 }
                 pos = 0;
                 for (Alumnos al : alumnos) {
-                    System.out.println(al.getApodo() + " " + al.getResistencia());
                     int res = al.getResistencia() - rusos.get(pos).getPoder_fuego();
                     al.setResistencia(res);
                     pos++;
-                    System.out.println(al.getApodo() + " " + al.getResistencia());
+                }
+                //---Segunda Ronda---
+                pos = 0;
+                for (Rusos a : rusos) {
+                    int res = a.getResistencia() - alemanes.get(pos).getPoder_fuego();
+                    a.setResistencia(res);
+                    pos++;
+                }
+                pos = 0;
+                for (Alumnos al : alumnos) {
+                    int res = al.getResistencia() - alemanes.get(pos).getPoder_fuego();
+                    al.setResistencia(res);
+                    pos++;
+                }
+                //---Tercera Ronda---
+                pos = 0;
+                for (Rusos a : rusos) {
+                    int res = a.getResistencia() - alumnos.get(pos).getPoder_fuego();
+                    a.setResistencia(res);
+                    pos++;
+                }
+                pos = 0;
+                for (Alemanes al : alemanes) {
+                    int res = al.getResistencia() - alumnos.get(pos).getPoder_fuego();
+                    al.setResistencia(res);
+                    pos++;
                 }
             }
         }
