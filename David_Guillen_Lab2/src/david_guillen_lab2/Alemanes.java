@@ -1,4 +1,7 @@
 package david_guillen_lab2;
+
+import javax.swing.JOptionPane;
+
 public class Alemanes {
     private String alias;
     private int edad;
@@ -9,11 +12,11 @@ public class Alemanes {
     public Alemanes() {
     }
 
-    public Alemanes(String alias, int edad, String casta, int resistencia, String tipo_arma) {
+    public Alemanes(String alias, int edad, String casta, String tipo_arma) {
         this.alias = alias;
         this.edad = edad;
         this.casta = casta;
-        this.resistencia = resistencia;
+        this.resistencia = 8 * edad;
         this.tipo_arma = tipo_arma;
         if (tipo_arma.equalsIgnoreCase("MP 40")) {
             poder_fuego = 25;

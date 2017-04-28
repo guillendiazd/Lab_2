@@ -1,6 +1,7 @@
 package david_guillen_lab2;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 public class Alumnos {
     private String apodo;
@@ -13,11 +14,11 @@ public class Alumnos {
     public Alumnos() {
     }
 
-    public Alumnos(String apodo, int numero_cuenta, int edad, int resistencia, int grado_academico, String mochila) {
+    public Alumnos(String apodo, int numero_cuenta, int edad, int grado_academico, String mochila) {
         this.apodo = apodo;
         this.numero_cuenta = numero_cuenta;
         this.edad = edad;
-        this.resistencia = resistencia;
+        this.resistencia = 8 * edad;
         this.grado_academico = grado_academico;
         this.mochila = mochila;
         if (mochila.equalsIgnoreCase("Disco duro")) {

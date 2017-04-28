@@ -1,4 +1,7 @@
 package david_guillen_lab2;
+
+import javax.swing.JOptionPane;
+
 public class Rusos {
     private String nombre;
     private String id;
@@ -11,12 +14,12 @@ public class Rusos {
     public Rusos() {
     }
 
-    public Rusos(String nombre, String id, int edad, int rango, int resistencia, String tipo_arma) {
+    public Rusos(String nombre, String id, int edad, int rango, String tipo_arma) {
         this.nombre = nombre;
         this.id = id;
         this.edad = edad;
         this.rango = rango;
-        this.resistencia = resistencia;
+        this.resistencia = 8 * edad;
         this.tipo_arma = tipo_arma;
         if (tipo_arma.equalsIgnoreCase("AK-47")) {
             poder_fuego = 27;
@@ -73,6 +76,7 @@ public class Rusos {
 
     public void setTipo_arma(String tipo_arma) {
         this.tipo_arma = tipo_arma;
+        
     }
 
     public int getPoder_fuego() {
