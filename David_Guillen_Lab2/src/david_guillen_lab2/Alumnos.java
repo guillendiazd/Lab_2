@@ -20,6 +20,13 @@ public class Alumnos {
         this.resistencia = resistencia;
         this.grado_academico = grado_academico;
         this.mochila = mochila;
+        if (mochila.equalsIgnoreCase("Disco duro")) {
+            poder_fuego = 23;
+        }else if (mochila.equalsIgnoreCase("Control de Wii")) {
+            poder_fuego = 47;
+        }else if (mochila.equalsIgnoreCase("Laptop")) {
+            poder_fuego = 76;
+        }
     }
 
     public String getApodo() {

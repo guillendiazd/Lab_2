@@ -15,6 +15,13 @@ public class Alemanes {
         this.casta = casta;
         this.resistencia = resistencia;
         this.tipo_arma = tipo_arma;
+        if (tipo_arma.equalsIgnoreCase("MP 40")) {
+            poder_fuego = 25;
+        }else if (tipo_arma.equalsIgnoreCase("MG42")) {
+            poder_fuego = 32;
+        }else if (tipo_arma.equalsIgnoreCase("Walther P38")) {
+            poder_fuego = 11;
+        }
     }
 
     public String getAlias() {

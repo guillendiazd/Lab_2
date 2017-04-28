@@ -18,6 +18,13 @@ public class Rusos {
         this.rango = rango;
         this.resistencia = resistencia;
         this.tipo_arma = tipo_arma;
+        if (tipo_arma.equalsIgnoreCase("AK-47")) {
+            poder_fuego = 27;
+        }else if (tipo_arma.equalsIgnoreCase("Revolver Navant")) {
+            poder_fuego = 13;
+        }else if (tipo_arma.equalsIgnoreCase("RPG-7")) {
+            poder_fuego = 57;
+        }
     }
 
     public String getNombre() {

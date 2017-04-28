@@ -11,9 +11,9 @@ import javax.swing.JOptionPane;
         ArrayList<Alumnos> alumnos = new ArrayList();
         while(!opcion.equals("f")){
             opcion = JOptionPane.showInputDialog(null, "Ingrese Opcion\n"
-                    + "a). Reclutiar Ruso\n"
-                    + "b). Reclutiar Aleman\n"
-                    + "c). Reclutiar Alumno");
+                    + "a). Reclutar Ruso\n"
+                    + "b). Reclutar Aleman\n"
+                    + "c). Reclutar Alumno");
             if (opcion.equals("a")) {
                 String nombre, id, tipo_arma;
                 int edad, rango, resistencia;
