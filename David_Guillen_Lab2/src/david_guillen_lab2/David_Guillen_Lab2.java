@@ -1,6 +1,7 @@
 package david_guillen_lab2;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import javax.swing.JOptionPane;
 
     public class David_Guillen_Lab2 {
@@ -29,14 +30,23 @@ import javax.swing.JOptionPane;
                 edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese Edad del soldado"));
                 rango = Integer.parseInt(JOptionPane.showInputDialog("Ingrese Rango del soldado"));
                 tipo_arma = JOptionPane.showInputDialog("Ingrese Tipo de arma del soldado\n"
-                        + "AK-47\n"
-                        + "Revolver Navant\n"
-                        + "RPG-7\n");
+                        + "a) AK-47\n"
+                        + "b) Revolver Navant\n"
+                        + "c) RPG-7\n");
+                if (tipo_arma.equalsIgnoreCase("a")) {
+                    tipo_arma = "AK-47";
+                } else if (tipo_arma.equalsIgnoreCase("b")){
+                    tipo_arma = "Revolver Navant";
+                } else if(tipo_arma.equalsIgnoreCase("c")){
+                    tipo_arma = "RPG-7";
+                }else{
+                    JOptionPane.showMessageDialog(null, "Opcion Incorrecta");
+                }
                 if (edad >= 18 ) {
-                    if (tipo_arma.equalsIgnoreCase("RPG-7") && edad>=25) {
-                        rusos.add(new Rusos(nombre, id, edad, rango, tipo_arma));
-                    }else{
+                    if (tipo_arma.equalsIgnoreCase("RPG-7") && edad<25) {
                         JOptionPane.showMessageDialog(null, "Edad no suficiente para equipar el RPG-7");
+                    }else{
+                        rusos.add(new Rusos(nombre, id, edad, rango, tipo_arma));
                     }
                     
                 } else {
@@ -50,9 +60,18 @@ import javax.swing.JOptionPane;
                 edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese Edad del soldado"));
                 casta = JOptionPane.showInputDialog("Ingrese Casta del soldado");
                 tipo_arma = JOptionPane.showInputDialog("Ingrese Tipo de arma del soldado\n"
-                        + "MP 40\n"
-                        + "MG42\n"
-                        + "Walther P38\n");
+                        + "a) MP 40\n"
+                        + "b) MG42\n"
+                        + "c) Walther P38\n");
+                if (tipo_arma.equalsIgnoreCase("a")) {
+                    tipo_arma = "MP 40";
+                } else if (tipo_arma.equalsIgnoreCase("b")){
+                    tipo_arma = "MG42";
+                } else if(tipo_arma.equalsIgnoreCase("c")){
+                    tipo_arma = "Walter p38";
+                }else{
+                    JOptionPane.showMessageDialog(null, "Opcion Incorrecta");
+                }
                 if (edad > 0) {
                     alemanes.add(new Alemanes(alias, edad, casta, tipo_arma));
                 } else {
@@ -67,9 +86,18 @@ import javax.swing.JOptionPane;
                 edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese Edad del alumno"));
                 grado_academico = Integer.parseInt(JOptionPane.showInputDialog("Ingrese Grado academico del alumno"));
                 mochila = JOptionPane.showInputDialog("Ingrese Objeto de la mochila del alumno\n"
-                        + "Disco duro\n"
-                        + "Control de Wii\n"
-                        + "Laptop\n");
+                        + "a) Disco duro\n"
+                        + "b) Control de Wii\n"
+                        + "c) Laptop\n");
+                if (mochila.equalsIgnoreCase("a")) {
+                    mochila = "Disco duro";
+                } else if (mochila.equalsIgnoreCase("b")){
+                    mochila = "Control de Wiit";
+                } else if(mochila.equalsIgnoreCase("c")){
+                    mochila = "Laptop";
+                }else{
+                    JOptionPane.showMessageDialog(null, "Opcion Incorrecta");
+                }
                 if (edad >= 16) {
                     alumnos.add(new Alumnos(apodo, numero_cuenta, edad, grado_academico, mochila));
                 } else {
@@ -91,10 +119,28 @@ import javax.swing.JOptionPane;
                 edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese Edad del soldado"));
                 rango = Integer.parseInt(JOptionPane.showInputDialog("Ingrese Rango del soldado"));
                 tipo_arma = JOptionPane.showInputDialog("Ingrese Tipo de arma del soldado\n"
-                        + "AK-47\n"
-                        + "Revolver Navant\n"
-                        + "RPG-7\n");
-                rusos.set(pos, new Rusos(nombre, id, edad, rango, tipo_arma));
+                        + "a) AK-47\n"
+                        + "b) Revolver Navant\n"
+                        + "c) RPG-7\n");
+                 if (tipo_arma.equalsIgnoreCase("a")) {
+                    tipo_arma = "AK-47";
+                } else if (tipo_arma.equalsIgnoreCase("b")){
+                    tipo_arma = "Revolver Navant";
+                } else if(tipo_arma.equalsIgnoreCase("c")){
+                    tipo_arma = "RPG-7";
+                }else{
+                    JOptionPane.showMessageDialog(null, "Opcion Incorrecta");
+                }
+                if (edad >= 18 ) {
+                    if (tipo_arma.equalsIgnoreCase("RPG-7") && edad<25) {
+                        JOptionPane.showMessageDialog(null, "Edad no suficiente para equipar el RPG-7");
+                    }else{
+                        rusos.add(new Rusos(nombre, id, edad, rango, tipo_arma));
+                    }
+                    
+                } else {
+                    JOptionPane.showMessageDialog(null, "Edad incorrecta");
+                }
             }
             if (opcion.equalsIgnoreCase("e")) {
                 int t = 0;
@@ -110,10 +156,23 @@ import javax.swing.JOptionPane;
                 edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese Edad del soldado"));
                 casta = JOptionPane.showInputDialog("Ingrese Casta del soldado");
                 tipo_arma = JOptionPane.showInputDialog("Ingrese Tipo de arma del soldado\n"
-                        + "MP 40\n"
-                        + "MG42\n"
-                        + "Walther P38\n");
-                alemanes.set(pos, new Alemanes(alias, edad, casta, tipo_arma));
+                        + "a) MP 40\n"
+                        + "b) MG42\n"
+                        + "c) Walther P38\n");
+                 if (tipo_arma.equalsIgnoreCase("a")) {
+                    tipo_arma = "MP 40";
+                } else if (tipo_arma.equalsIgnoreCase("b")){
+                    tipo_arma = "MG42";
+                } else if(tipo_arma.equalsIgnoreCase("c")){
+                    tipo_arma = "Walter p38";
+                }else{
+                    JOptionPane.showMessageDialog(null, "Opcion Incorrecta");
+                }
+                if (edad > 0) {
+                    alemanes.add(new Alemanes(alias, edad, casta, tipo_arma));
+                } else {
+                    JOptionPane.showMessageDialog(null, "Edad incorrecta");
+                }
             }
             if (opcion.equalsIgnoreCase("f")) {
                 int t = 0;
@@ -130,10 +189,23 @@ import javax.swing.JOptionPane;
                 edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese Edad del alumno"));
                 grado_academico = Integer.parseInt(JOptionPane.showInputDialog("Ingrese Grado academico del alumno"));
                 mochila = JOptionPane.showInputDialog("Ingrese Objeto de la mochila del alumno\n"
-                        + "Disco duro\n"
-                        + "Control de Wii\n"
-                        + "Laptop\n");
-                alumnos.set(pos, new Alumnos(apodo, numero_cuenta, edad, grado_academico, mochila));
+                        + "a) Disco duro\n"
+                        + "b) Control de Wii\n"
+                        + "c) Laptop\n");
+                if (mochila.equalsIgnoreCase("a")) {
+                    mochila = "Disco duro";
+                } else if (mochila.equalsIgnoreCase("b")){
+                    mochila = "Control de Wiit";
+                } else if(mochila.equalsIgnoreCase("c")){
+                    mochila = "Laptop";
+                }else{
+                    JOptionPane.showMessageDialog(null, "Opcion Incorrecta");
+                }
+                if (edad >= 16) {
+                    alumnos.add(new Alumnos(apodo, numero_cuenta, edad, grado_academico, mochila));
+                } else {
+                    JOptionPane.showMessageDialog(null, "Edad incorrecta");
+                }
             }
             if (opcion.equalsIgnoreCase("g")) {
                 int t = 0;
@@ -144,7 +216,7 @@ import javax.swing.JOptionPane;
                 int pos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese Posicion"));
                 rusos.remove(pos);
             }
-            if (opcion.equalsIgnoreCase("g")) {
+            if (opcion.equalsIgnoreCase("h")) {
                 int t = 0;
                 for (Alemanes r : alemanes) {
                     System.out.println(t+". "+r);
@@ -163,13 +235,26 @@ import javax.swing.JOptionPane;
                 alumnos.remove(pos);
             }
             if (opcion.equalsIgnoreCase("j")) {
-                int token = 0;
-                while(token==1){
-                    //---Primera Ronda---
-                    
+                 //---Primera Ronda---
+                int pos = 0;
+                for (Alemanes a : alemanes) {
+                    System.out.println(a.getAlias() + " " + a.getResistencia());
+                    int res = a.getResistencia() - rusos.get(pos).getPoder_fuego();
+                    a.setResistencia(res);
+                    pos++;
+                    System.out.println(a.getAlias() + " " + a.getResistencia());
+                }
+                pos = 0;
+                for (Alumnos al : alumnos) {
+                    System.out.println(al.getApodo() + " " + al.getResistencia());
+                    int res = al.getResistencia() - rusos.get(pos).getPoder_fuego();
+                    al.setResistencia(res);
+                    pos++;
+                    System.out.println(al.getApodo() + " " + al.getResistencia());
                 }
             }
         }
     }
-    
 }
+
+
